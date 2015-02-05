@@ -29,10 +29,20 @@ describe('getStock', function() {
 });
 
 describe('addStockToTable', function () {
-  it('should get the stock info and append the table', function (){
+  it('should add a row to table', function (){
     var stock = { Name: "SuperCorp", Symbol: "SCRP", LastPrice: 12.34 }
     $('tr').length.should.equal(0);
     addStockToTable(stock);
     $('tr').length.should.equal(1);
+  });
+  it('should use stock data in the appended row', function(){
+    var stock = { Name: "SuperCorp", Symbol: "SCRP", LastPrice: 12.34 },
+        $row  = addStockToTable(stock);
+        $tds  = $row.find('td');
+
+    $tds.length.should.equal(3);
+    $($tds[0]).text().should.equal('SuperCorp');
+    $($tds[1]).text().should.equal('SCRP');
+    $($tds[2]).text().should.equal('12.34');
   });
 });

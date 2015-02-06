@@ -1,0 +1,33 @@
+{
+  "name": "MochaPortfolio",
+  "version": "0.0.1",
+  "description": "this is an app demonstrating testing of front-end JS with mocha and chai",
+  "main": "public/index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayumi-b/MochaPortfolio.git"
+  },
+  "author": "ayumi fukuda bennett <ayumi.fukuda@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayumi-b/MochaPortfolio/issues"
+  },
+  "homepage": "https://github.com/ayumi-b/MochaPortfolio",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "karma": "^0.12.31",
+    "karma-chai": "^0.1.0",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^2.1.0",
+    "mocha-phantomjs": "^3.5.3",
+    "phantomjs": "^1.9.15"
+  }
+}
